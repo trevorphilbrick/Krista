@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krista Booker | Digital Marketing Portfolioa</title>
+    <link rel="stylesheet" href="app.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+
+        <nav class="navbar">
+            <div class="navLinks">
+                <a href="#home">Home</a>
+                <a href="#portfolio">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+    <section class="hero rellax" id="home" data-rellax-speed="-7">
+
+        <img src="/1605912773595.jpg" alt="Krista Booker" class="heroMobileImage">
+
+        <article class="heroContent">
+            <h3 class="heroTitle">Krista Booker</h3>
+            <h4 class="heroSub">Digital Marketing Specialist</h4>
+            <div class="buttonCenter">
+                <!-- Mobile view button -->
+                <a href="#contact" class="contactButtonMobile">Contact Me</a>
+                <!-- Desktop View Button -->
+                <div class="desktopButton">
+                    <a href="#contact">Contact Me</a>
+                    <div class="buttonBackground"></div>
+                </div>
+
+            </div>
+            <p class="heroBio">Krista is an enthusiastic digital marketing specialist knowledgeable about online
+                strategies
+                and trends.
+                She has hands-on experience with nonprofits and has previous success in increasing social media
+                following. She also has a solid grasp of email marketing, SEO, and has knowledge of strategies impacting
+                campaign success and ROI.
+                <br>
+                Krista is a youthful, generalist with a fresh understanding of digital marketing through programs like
+                Thinkful, Google Digital Garage, and Udemy. She also stays up to date with recent online news and
+                changes in social media and e-commerce websites. She strives at growing her knowledge every day and
+                understands there is always more to learn in the ever-changing digital marketing industry.
+            </p>
+
+
+
+        </article>
+        <div class="heroImage">
+            <img src="/Hero Image.svg" alt="Krista Booker">
+        </div>
+    </section>
+
+
+    <section class="portfolio rellax" id="portfolio" data-rellax-speed="0">
+        <h3>Portfolio</h3>
+        <article class="cardSection">
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+        </article>
+
+        <div class="decTwo rellax" data-rellax-speed="1.5">
+            <img src="/decoration2.svg" alt="">
+        </div>
+    </section>
+    <section class="contact " id="contact">
+        <article class="contactContent">
+            <h3>Contact Me</h3>
+            <p class="descriptor">Email</p>
+            <p>kriboo22@gmail.com</p>
+            <p class="descriptor">Phone</p>
+            <p>856-264-3231</p>
+            <p class="descriptor">Location</p>
+            <p>Sicklerville, NJ</p>
+        </article>
+        <div class="contactImage">
+            <img src="/sicklerville.PNG" alt="">
+        </div>
+
+        <div class="decOne rellax" data-rellax-speed="1.5">
+            <img src="/decoration1.svg" alt="">
+        </div>
+    </section>
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js"
+        integrity="sha512-f5HTYZYTDZelxS7LEQYv8ppMHTZ6JJWglzeQmr0CVTS70vJgaJiIO15ALqI7bhsracojbXkezUIL+35UXwwGrQ=="
+        crossorigin="anonymous"></script>
+
+    <script>
+        // Also can pass in optional settings block
+        var rellax = new Rellax('.rellax', {
+            speed: -2,
+            center: false,
+            wrapper: null,
+            round: true,
+            vertical: true,
+            horizontal: false
+        });
+    </script>
+</body>
+
+</html>
