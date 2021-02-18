@@ -146,6 +146,7 @@
 
 .portfolio {
   width: 100%;
+  height: 100vh;
   padding: calc(30px + 4rem) 0 0 0;
   z-index: 10;
   background-color: #DEDFDE;
@@ -179,8 +180,36 @@
   max-width: 340px;
   height: 200px;
   margin-bottom: 30px;
-  border: black 1px solid;
-  background: white;
+  background: url("/Save the Waves/Krista Booker - Digitial Marketing Portfolio .png");
+  background-size: cover;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+.portfolio .cardSection .card .carousel {
+  display: none;
+}
+
+.portfolio .cardSection .card:hover {
+  background: #6E7085;
+  overflow: hidden;
+}
+
+.portfolio .cardSection .card:hover .carousel {
+  height: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-animation: slideshow 20s linear  infinite;
+          animation: slideshow 20s linear  infinite;
+}
+
+.portfolio .cardSection .card:hover .carousel img {
+  height: 180px;
+  margin: 10px;
 }
 
 .contact {
@@ -190,7 +219,7 @@
   background-color: #6E7085;
 }
 
-.contact .contactContent h3 {
+.contact h3 {
   color: white;
   font-weight: lighter;
   padding-bottom: 30px;
@@ -313,22 +342,94 @@
     padding: 0 10%;
     z-index: #D1B9AE;
   }
-  .portfolio .decTwo {
+  .decTwo {
     display: inline;
     z-index: -1;
     position: absolute;
     top: -50px;
     left: 0;
   }
-  .contact {
-    position: relative;
+}
+
+.contact {
+  position: relative;
+  padding: 0 10%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+}
+
+.contact h3 {
+  color: white;
+  font-weight: lighter;
+  padding: calc(30px + 4rem) 0 30px 0;
+  font-size: 55px;
+  text-align: center;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: 1/1/2/3;
+}
+
+.contact .contactContent {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-area: 1/1/2/2;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.contact .decOne {
+  display: inline;
+  z-index: 0;
+  position: absolute;
+  top: -50px;
+  right: 0;
+}
+
+.contact .contactImage {
+  display: block;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 2;
+  grid-area: 1/2/2/2;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  z-index: 2;
+}
+
+.contact .contactImage img {
+  max-width: 650px;
+  width: 100%;
+}
+
+@-webkit-keyframes slideshow {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
-  .contact .decOne {
-    display: inline;
-    z-index: 0;
-    position: absolute;
-    top: -50px;
-    right: 0;
+  100% {
+    -webkit-transform: translateX(-400%);
+            transform: translateX(-400%);
+  }
+}
+
+@keyframes slideshow {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-400%);
+            transform: translateX(-400%);
   }
 }
 /*# sourceMappingURL=app.css.map */
