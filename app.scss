@@ -37,6 +37,10 @@ $FontSecondary: 'Rubik', sans-serif;
     height: 4rem;
     z-index: 2;
 
+    .logo{
+        display: none;
+    }
+
     .navLinks{
         height: 4rem;
         display: flex;
@@ -49,9 +53,7 @@ $FontSecondary: 'Rubik', sans-serif;
     }
 }
 
-body{
-    
-}
+
 
 .hero{
     width: 100%;
@@ -238,15 +240,22 @@ body{
     }
 }
 
-.decOne, .decTwo ,.contactImage{
+.mobileHidden{
 display: none;
-
-
 }
 // Tablet View
 @media(min-width:768px){
 .navbar{
 
+    .logo {
+    display: inline-block;
+    margin: 5px 0 0 10%;
+    img{
+        
+        width: 50px;
+        
+    }
+}
     .navLinks{
         width: 30%;
         float: right;
@@ -389,7 +398,7 @@ display: none;
 
         }
         .decOne{       
-            display: inline;
+            display: block;
             z-index: 0;
             
             position: absolute;
@@ -413,7 +422,9 @@ display: none;
     
 }
 
-
+.mobileHidden{
+    display: block;
+}
 
 // Desktop View
 @media(min-width:1020px){

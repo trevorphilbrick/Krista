@@ -19,6 +19,10 @@
   z-index: 2;
 }
 
+.navbar .logo {
+  display: none;
+}
+
 .navbar .navLinks {
   height: 4rem;
   display: -webkit-box;
@@ -240,11 +244,18 @@
   letter-spacing: 1.5px;
 }
 
-.decOne, .decTwo, .contactImage {
+.mobileHidden {
   display: none;
 }
 
 @media (min-width: 768px) {
+  .navbar .logo {
+    display: inline-block;
+    margin: 5px 0 0 10%;
+  }
+  .navbar .logo img {
+    width: 50px;
+  }
   .navbar .navLinks {
     width: 30%;
     float: right;
@@ -387,7 +398,7 @@
 }
 
 .contact .decOne {
-  display: inline;
+  display: block;
   z-index: 0;
   position: absolute;
   top: -50px;
@@ -409,6 +420,10 @@
 .contact .contactImage img {
   max-width: 650px;
   width: 100%;
+}
+
+.mobileHidden {
+  display: block;
 }
 
 @-webkit-keyframes slideshow {
