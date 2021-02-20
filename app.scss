@@ -174,13 +174,23 @@ $FontSecondary: 'Rubik', sans-serif;
             background-size: cover;
             transition: 0.5s ease-in-out;
 
+            a{
+                display: flex;
+                animation: slideshow 20s linear  infinite ;
+                
+            }
+            
+            
             .carousel{
                 display: none;
             }
         }
         .card:hover{
+            
             background:$My-Color-Theme-1-hex ;
             overflow: hidden;
+            
+                
 
         
             
@@ -189,7 +199,6 @@ $FontSecondary: 'Rubik', sans-serif;
                 height: 200px;
                 display: flex ;
                 align-items: center;
-                animation: slideshow 20s linear  infinite ;
                 
 
 
@@ -209,6 +218,7 @@ $FontSecondary: 'Rubik', sans-serif;
     width: 100%;
     height: 100vh;
     padding-top: calc(30px + 4rem);
+   
 
     background-color: $My-Color-Theme-1-hex;
 
@@ -241,8 +251,11 @@ $FontSecondary: 'Rubik', sans-serif;
 }
 
 .mobileHidden{
+visibility: hidden;
 display: none;
+
 }
+
 // Tablet View
 @media(min-width:768px){
 .navbar{
@@ -334,7 +347,8 @@ display: none;
            .heroBio{
                visibility: visible;
 
-               margin-top:2.5em ;
+               margin-top:60px ;
+               font-size: 12px;
            }
        }
 
@@ -365,70 +379,79 @@ display: none;
             }
         }
         .decTwo{
-            display: inline;
+            
             z-index: -1;
 
             position: absolute;
             top: -50px;
             left: 0;
         }
-    }
-
-
     .contact{
-        position: relative;
-        padding: 0 10%;
-
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr;
-
-    h3{
-        color: white;
-        font-weight: lighter;
-        padding: calc(30px + 4rem) 0 30px 0;
-        font-size: 55px;
-        text-align: center;
-
-        grid-area: 1/1/2/3;
-    }
-        .contactContent{
-        grid-area: 1/1/2/2;
-        align-self: center;
-
-        }
-        .decOne{       
-            display: block;
-            z-index: 0;
-            
-            position: absolute;
-            top: -50px;
-            right: 0;
-        }
-
-        .contactImage{
-            display: block;
-            grid-area: 1/2/2/2;
-            align-self: center;
-            z-index: 2;
-
-            img{
-                max-width: 650px;
-                width: 100%;
-            }
-        }
-
- 
+            position: relative;
+            padding: 0 10%;
     
-}
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr;
+    
+        h3{
+            color: white;
+            font-weight: lighter;
+            padding: calc(30px + 4rem) 0 30px 0;
+            font-size: 55px;
+            text-align: center;
+    
+            grid-area: 1/1/2/3;
+        }
+            .contactContent{
+            grid-area: 1/1/2/2;
+            align-self: center;
+    
+            }
+            .decOne{       
+                
+                z-index: 0;
+                
+                position: absolute;
+                top: -50px;
+                right: 0;
+            }
+    
+            .contactImage{
+                
+                grid-area: 1/2/2/2;
+                align-self: center;
+                z-index: 2;
+    
+                img{
+                    max-width: 650px;
+                    width: 100%;
+                }
+            }   
+    }
+    .mobileHidden{
+        visibility: visible;
+      display: block;
+    }
+    }
 
-.mobileHidden{
-    display: block;
-}
+
+
+
+
+
 
 // Desktop View
 @media(min-width:1020px){
 
+.hero{
+    .heroContent{
+
+    .heroBio{
+        font-size: 16px;
+    }
+}
+}
 }
 
 @keyframes slideshow{

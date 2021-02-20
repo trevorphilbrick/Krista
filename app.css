@@ -190,6 +190,14 @@
   transition: 0.5s ease-in-out;
 }
 
+.portfolio .cardSection .card a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-animation: slideshow 20s linear  infinite;
+          animation: slideshow 20s linear  infinite;
+}
+
 .portfolio .cardSection .card .carousel {
   display: none;
 }
@@ -207,8 +215,6 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-animation: slideshow 20s linear  infinite;
-          animation: slideshow 20s linear  infinite;
 }
 
 .portfolio .cardSection .card:hover .carousel img {
@@ -245,6 +251,7 @@
 }
 
 .mobileHidden {
+  visibility: hidden;
   display: none;
 }
 
@@ -321,7 +328,8 @@
   }
   .hero .heroContent .heroBio {
     visibility: visible;
-    margin-top: 2.5em;
+    margin-top: 60px;
+    font-size: 12px;
   }
   .hero .heroMobileImage, .hero .contactButtonMobile {
     display: none;
@@ -354,76 +362,73 @@
     z-index: #D1B9AE;
   }
   .decTwo {
-    display: inline;
     z-index: -1;
     position: absolute;
     top: -50px;
     left: 0;
   }
+  .contact {
+    position: relative;
+    padding: 0 10%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+  }
+  .contact h3 {
+    color: white;
+    font-weight: lighter;
+    padding: calc(30px + 4rem) 0 30px 0;
+    font-size: 55px;
+    text-align: center;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: 1/1/2/3;
+  }
+  .contact .contactContent {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-area: 1/1/2/2;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .contact .decOne {
+    z-index: 0;
+    position: absolute;
+    top: -50px;
+    right: 0;
+  }
+  .contact .contactImage {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 2;
+    grid-area: 1/2/2/2;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    z-index: 2;
+  }
+  .contact .contactImage img {
+    max-width: 650px;
+    width: 100%;
+  }
+  .mobileHidden {
+    visibility: visible;
+    display: block;
+  }
 }
 
-.contact {
-  position: relative;
-  padding: 0 10%;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-  -ms-grid-rows: 1fr;
-      grid-template-rows: 1fr;
-}
-
-.contact h3 {
-  color: white;
-  font-weight: lighter;
-  padding: calc(30px + 4rem) 0 30px 0;
-  font-size: 55px;
-  text-align: center;
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 1;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-area: 1/1/2/3;
-}
-
-.contact .contactContent {
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 1;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
-  grid-area: 1/1/2/2;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-}
-
-.contact .decOne {
-  display: block;
-  z-index: 0;
-  position: absolute;
-  top: -50px;
-  right: 0;
-}
-
-.contact .contactImage {
-  display: block;
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 1;
-  -ms-grid-column: 2;
-  grid-area: 1/2/2/2;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  z-index: 2;
-}
-
-.contact .contactImage img {
-  max-width: 650px;
-  width: 100%;
-}
-
-.mobileHidden {
-  display: block;
+@media (min-width: 1020px) {
+  .hero .heroContent .heroBio {
+    font-size: 16px;
+  }
 }
 
 @-webkit-keyframes slideshow {
