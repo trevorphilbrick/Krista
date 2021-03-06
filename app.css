@@ -9,6 +9,13 @@
           box-sizing: border-box;
 }
 
+h4 {
+  font-size: 25px;
+  text-align: center;
+  font-weight: normal;
+  letter-spacing: 1.2px;
+}
+
 .navbar {
   background: white;
   position: fixed;
@@ -96,10 +103,6 @@
 
 .hero .heroContent .heroSub {
   margin-top: 7px;
-  font-size: 25px;
-  text-align: center;
-  font-weight: normal;
-  letter-spacing: 1.2px;
 }
 
 .hero .heroContent .heroBio {
@@ -177,49 +180,6 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-.portfolio .cardSection .card {
-  width: 90%;
-  max-width: 340px;
-  height: 200px;
-  margin-bottom: 30px;
-  background: url("/Save the Waves/Krista Booker - Digitial Marketing Portfolio .png");
-  background-size: cover;
-  -webkit-transition: 0.5s ease-in-out;
-  transition: 0.5s ease-in-out;
-}
-
-.portfolio .cardSection .card a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-animation: slideshow 20s linear  infinite;
-          animation: slideshow 20s linear  infinite;
-}
-
-.portfolio .cardSection .card .carousel {
-  display: none;
-}
-
-.portfolio .cardSection .card:hover {
-  background: #6E7085;
-  overflow: hidden;
-}
-
-.portfolio .cardSection .card:hover .carousel {
-  height: 200px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.portfolio .cardSection .card:hover .carousel img {
-  height: 180px;
-  margin: 10px;
 }
 
 .contact {
@@ -358,8 +318,56 @@
         justify-content: space-around;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    padding: 0 10%;
+    padding: 1rem 10%;
     z-index: #D1B9AE;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+  }
+  .portfolio .cardSection .card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .portfolio .cardSection .card .portfolio-text {
+    background: white;
+    width: 60%;
+    margin: 20px 0;
+  }
+  .portfolio .cardSection .card .portfolio-text .card-title, .portfolio .cardSection .card .portfolio-text .card-info, .portfolio .cardSection .card .portfolio-text .card-call {
+    text-align: left;
+    padding-left: 10%;
+  }
+  .portfolio .cardSection .card .portfolio-text .card-title {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .portfolio .cardSection .card .portfolio-text .card-info {
+    padding-right: 10%;
+  }
+  .portfolio .cardSection .card .portfolio-text .card-call {
+    font-weight: bold;
+    text-align: left;
+    margin-top: 20px;
+  }
+  .portfolio .cardSection .card .portfolio-text i {
+    float: left;
+    margin: 10px 10%;
+  }
+  .portfolio .cardSection .card .portfolio-image {
+    width: 30%;
+    height: auto;
+  }
+  .portfolio .cardSection .card .portfolio-image img {
+    width: 100%;
+    -webkit-filter: drop-shadow(5px 5px 20px rgba(0, 0, 0, 0.5));
+            filter: drop-shadow(5px 5px 20px rgba(0, 0, 0, 0.5));
   }
   .decTwo {
     z-index: -1;
